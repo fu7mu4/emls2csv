@@ -12,10 +12,9 @@ Clozure CLは Linux, Mac OS X, Windowsのそれぞれの環境で実行形式を
 Requirements
 ============
 
-Clozure CL
-cl-ppcre
-csv-parser
-
+Clozure CL (LLGPL)
+cl-ppcre   (BSD style)
+csv-parser (BSD style)
 
 How To Create Binary
 ====================
@@ -36,6 +35,13 @@ assumed that you've installed quicklisp. すでに、quicklispが導入されて
 ; create a windows binary executable by ccl  ClozureCLでWindows用バイナリを作成します。
 
 (ccl:save-application "eml2csv.exe" :toplevel-function #'eml2csv-small :prepend-kernel t )
+
+Released Binary
+===============
+
+Released Binary is built only for Japanese Windows User. The character encoding is CP932 (Shift_JIS). It's for poor MS Excel.
+
+I recommend to built it using Clozure CL by yourself.
 
 How To Use Binary
 =================
