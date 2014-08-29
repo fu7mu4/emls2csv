@@ -105,5 +105,5 @@
   (with-open-file (out "result.csv" :direction :output :if-exists :supersede)
     (mapc 
      (lambda (x) (csv-parser:write-csv-line out (read-txt-mail x)))
-     (directory "./*.txt"))))
+     (directory "./*.eml"))))
 
